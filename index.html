@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+    <link rel="stylesheet" href="index.css">
+    
+</head>
+<body>
+    <h1 id="text"></h1>
+
+    <!--js internal, sugjerohet te jete i fundit; mund te perdoret edhe vtm alert pa fjalen window perpara-->
+    <script>
+       //alert("hello world!");
+       document.getElementById("text").textContent="hello"; //eshte e njejte me #id qe therret
+    </script>
+
+    <ul id="lista" onclick="emriFunksion()">
+    </ul>
+
+        <form onsubmit="shumaForm(event)">
+            <div>
+                <label for="nr1">numri 1</label> <br>
+                <input type="number" id="nr1">
+            </div>
+            <div>
+                <label for="nr2">numri 2</label> <br>
+                <input type="number" id="nr2">
+            </div>
+            <input type="submit" value="shuma">
+        </form>
+        <p>shuma e dy nr eshte: <span id="result"></span>.</p>
+        <h2 id="ndryshoStil">ndrysho stilizim</h2>
+        <button onclick="ndryshonCSS()">ndrysho</button> <br>
+
+        <form onsubmit="krahasimForm(event)">
+            <div>
+                <label for="n1">numri 1</label> <br>
+                <input type="number" id="n1">
+            </div>
+            <div>
+                <label for="n2">numri 2</label> <br>
+                <input type="number" id="n2">
+            </div>
+            <input type="submit" value="krahasimi">
+            <p>krahasimi i nr: <span id="rez"></span></p>
+        </form>
+        
+        <!-- <button onclick="hideShow()">toggle</button>  --> 
+         <button id="buttonToggle">toggle</button>
+        <ul id="listat" class="listatClass">
+            <li>test 1</li>
+            <li>test 2</li>
+        </ul>
+        <hr>
+        <form onsubmit="validate(event)">
+            <div>
+                <label for="emer">emri</label>
+                <input type="text" id="emer">
+                <span id="errorEmri"></span>
+            </div>
+            <div>
+                <label for="mbiemer">mbiemri</label>
+                <input type="text" id="mbiemer">
+            </div>
+            <input type="submit">
+        </form>
+        <p id="infoRez"></p>
+        <p>&copy; <span id="viti"></span></p>
+    <!--js external-->
+    <script src="index.js"></script>
+</body>
+</html>
